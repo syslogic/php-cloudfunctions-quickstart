@@ -21,7 +21,7 @@
     "url": "https://www.paypal.me/syslogic"
   }],
   "scripts": {
-    "test": "vendor/bin/phpunit --bootstrap vendor/autoload.php --configuration phpunit.xml --testsuite main",
+    "test": "XDEBUG_MODE=coverage vendor/bin/phpunit --bootstrap vendor/autoload.php --configuration phpunit.xml --testsuite main",
     "start": [ "Composer\\Config::disableProcessTimeout", "FUNCTION_TARGET=on_https php -S localhost:${PORT:-8081} vendor/bin/router.php"
     ]
   },
