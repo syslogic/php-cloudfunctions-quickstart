@@ -1,0 +1,7 @@
+/workspace.xml
+/modules.xml
+/php.xml
+/vcs.xml
+/phpunit.xml
+/php-test-framework.xml
+*.iml
