@@ -1,0 +1,57 @@
+{
+  "name": "syslogic/php-cloudfunctions-quickstart",
+  "description": "PHP Cloud Functions Quickstart",
+  "minimum-stability": "stable",
+  "type": "project",
+  "license": "MIT",
+  "version": "1.0.0",
+  "authors": [{
+    "name": "Martin Zeitler",
+    "homepage": "https://github.com/syslogic"
+  }],
+  "support": {
+    "docs": "https://github.com/syslogic/php-cloudfunctions-quickstart/README.md",
+    "issues": "https://github.com/syslogic/php-cloudfunctions-quickstart/issues",
+    "source": "https://github.com/syslogic/php-cloudfunctions-quickstart"
+  },
+  "funding": [{
+    "type": "github",
+    "url": "https://github.com/sponsors/syslogic"
+  }, {
+    "type": "paypal",
+    "url": "https://www.paypal.me/syslogic"
+  }],
+  "scripts": {
+    "test": "vendor/bin/phpunit --bootstrap vendor/autoload.php --configuration phpunit.xml --testsuite main",
+    "start": [ "Composer\\Config::disableProcessTimeout", "FUNCTION_TARGET=on_https php -S localhost:${PORT:-8081} vendor/bin/router.php"
+    ]
+  },
+  "scripts-descriptions": {
+    "test": "Run PHPunit tests",
+    "start": "Call function on_https"
+  },
+  "repositories": [],
+  "require": {
+    "php": ">= 7.4",
+    "ext-json": "*",
+    "google/cloud-logging": "^1.23.0",
+    "google/cloud-functions-framework": "^v1.1.0",
+    "google/cloud-storage": "^v1.26.1",
+    "guzzlehttp/psr7": "^2.1.0"
+
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.5.13",
+    "google/cloud-tools": "^0.12.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Quickstart\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Quickstart\\Test\\": "tests"
+    }
+  }
+}

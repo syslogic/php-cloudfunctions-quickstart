@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit colors="true">
+  <php>
+  </php>
+  <coverage>
+    <include>
+      <directory suffix=".php">./src</directory>
+    </include>
+    <report>
+      <html outputDirectory="./build/coverage" lowUpperBound="35" highLowerBound="70"/>
+      <text outputFile="php://stdout" showUncoveredFiles="true"/>
+    </report>
+  </coverage>
+  <testsuites>
+    <testsuite name="main">
+      <directory>src</directory>
+    </testsuite>
+  </testsuites>
+  <logging/>
+</phpunit>
