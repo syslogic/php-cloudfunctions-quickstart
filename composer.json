@@ -4,7 +4,6 @@
   "minimum-stability": "stable",
   "type": "project",
   "license": "MIT",
-  "version": "1.0.0",
   "authors": [{
     "name": "Martin Zeitler",
     "homepage": "https://github.com/syslogic"
