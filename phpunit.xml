@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit colors="true">
   <php>
+
   </php>
+
   <coverage>
     <include>
       <directory suffix=".php">./src</directory>
@@ -11,10 +13,13 @@
       <text outputFile="php://stdout" showUncoveredFiles="true"/>
     </report>
   </coverage>
+
   <testsuites>
     <testsuite name="main">
-      <directory>src</directory>
+      <directory suffix="TestCase.php">./tests</directory>
     </testsuite>
   </testsuites>
+
   <logging/>
+
 </phpunit>
