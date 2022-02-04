@@ -27,8 +27,10 @@ class SimpleTestCase extends TestCase {
         self::$test_bucket = 'gs://php-cloudfunctions';
     }
 
-    private static function get_project_id() {
-        return shell_exec('gcloud config get-value project');
+    private static function get_project_id(): string {
+        $stdout = shell_exec('gcloud config get-value project');
+        if ($stdout == null) {return 'unknown';}
+        else {return $stdout;}
     }
 
     public function test_on_https(): void {
