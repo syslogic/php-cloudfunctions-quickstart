@@ -2,14 +2,13 @@
 namespace Quickstart\Test;
 
 use CloudEvents\V1\CloudEventImmutable;
-use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\Psr7\ServerRequest;
 use Quickstart\CloudFunctions;
-use Google\CloudFunctions\CloudEvent;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Class SimpleTestCase.
+ * Class Simple TestCase.
+ * It depends on the <code>gcloud</code> command to obtain the project ID.
  *
  * @author Martin Zeitler
  * @version 1.0.0
@@ -37,7 +36,8 @@ class SimpleTestCase extends TestCase {
         $payload = json_encode(['data' => uniqid()]);
         $request = new ServerRequest('POST', '/', [], $payload);
         $response = CloudFunctions::on_https( $request );
-        $this->assertTrue($response instanceof Response);
+        $this->assertTrue($response->getReasonPhrase().equals("OK"));
+        $this->assertTrue($response->getStatusCode() == 200);
     }
 
     public function test_on_pubsub(): void {
