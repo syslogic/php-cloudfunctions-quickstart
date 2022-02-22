@@ -37,9 +37,9 @@
     "google/cloud-functions-framework": "^v1.1.0",
     "google/cloud-storage": "^v1.26.1",
     "guzzlehttp/psr7": "^2.1.0"
-
   },
   "require-dev": {
+    "ext-xdebug": "*",
     "phpunit/phpunit": "^9.5.14",
     "google/cloud-tools": "^0.12.0"
   },
