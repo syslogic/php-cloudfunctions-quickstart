@@ -45,12 +45,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Quickstart\\": "src"
+      "CloudFunctions\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Quickstart\\Test\\": "tests"
+      "CloudFunctions\\Test\\": "tests"
     }
   }
 }

@@ -10,7 +10,6 @@ use Google\CloudFunctions\FunctionsFramework;
 
 // Register functions with the Functions Framework.
 // https://console.cloud.google.com/functions/list
-FunctionsFramework::http(        'on_https', 'Quickstart\\CloudFunctions::on_https');
-FunctionsFramework::cloudEvent( 'on_pubsub', 'Quickstart\\CloudFunctions::on_pubsub');
-FunctionsFramework::cloudEvent(    'on_gcs', 'Quickstart\\CloudFunctions::on_gcs');
-
+FunctionsFramework::http(        'on_https', 'CloudFunctions\\CloudFunctions::on_https');
+FunctionsFramework::cloudEvent( 'on_pubsub', 'CloudFunctions\\CloudFunctions::on_pubsub');
+FunctionsFramework::cloudEvent(    'on_gcs', 'CloudFunctions\\CloudFunctions::on_gcs');

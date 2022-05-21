@@ -1,5 +1,5 @@
 <?php
-namespace Quickstart;
+namespace CloudFunctions;
 
 use CloudEvents\V1\CloudEventInterface;
 use GuzzleHttp\Psr7\Response;

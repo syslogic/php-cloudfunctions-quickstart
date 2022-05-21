@@ -1,9 +1,9 @@
 <?php
-namespace Quickstart\Test;
+namespace CloudFunctions\Test;
 
 use CloudEvents\V1\CloudEventImmutable;
 use GuzzleHttp\Psr7\ServerRequest;
-use Quickstart\CloudFunctions;
+use CloudFunctions\CloudFunctions;
 use PHPUnit\Framework\TestCase;
 
 /**
