@@ -16,9 +16,7 @@ use stdClass;
  */
 class CloudFunctions {
 
-    private static stdClass $response;
-
-    /**  */
+    /** On HTTPS */
     public static function on_https( ServerRequestInterface $request ): ResponseInterface {
         $params = $request->getQueryParams();
         $body = sprintf('Hello, %s!', $params['name'] ?? 'World');
@@ -27,7 +25,7 @@ class CloudFunctions {
             ->withStatus(200);
     }
 
-    /**  */
+    /** On Pub/Sub Event */
     public static function on_pubsub( CloudEventInterface $event ): void {
         $log = fopen(getenv('LOGGER_OUTPUT') ?: 'php://stdout', 'wb');
         $cloudEventData = $event->getData();
@@ -36,15 +34,15 @@ class CloudFunctions {
         fwrite($log, "Hello, $name!" . PHP_EOL);
     }
 
-    /**  */
+    /** On GCS Event */
     public static function on_gcs( CloudEventInterface $event ): void {
         $log = fopen(getenv('LOGGER_OUTPUT') ?: 'php://stdout', 'wb');
         $data = $event->getData();
-        fwrite($log, 'Event: ' . $event->getId() . PHP_EOL);
+        fwrite($log, 'Event: '      . $event->getId() . PHP_EOL);
         fwrite($log, 'Event Type: ' . $event->getType() . PHP_EOL);
-        fwrite($log, 'Bucket: ' . $data['bucket'] . PHP_EOL);
-        fwrite($log, 'File: ' . $data['name'] . PHP_EOL);
-        fwrite($log, 'Metageneration: ' . $data['metageneration'] . PHP_EOL);
+        fwrite($log, 'Bucket: '  . $data['bucket'] . PHP_EOL);
+        fwrite($log, 'File: '    . $data['name'] . PHP_EOL);
+        fwrite($log, 'Metagen: ' . $data['metageneration'] . PHP_EOL);
         fwrite($log, 'Created: ' . $data['timeCreated'] . PHP_EOL);
         fwrite($log, 'Updated: ' . $data['updated'] . PHP_EOL);
     }
