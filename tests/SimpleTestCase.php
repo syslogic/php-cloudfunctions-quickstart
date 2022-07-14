@@ -26,7 +26,7 @@ class SimpleTestCase extends TestCase {
         self::$pubsub_topic = 'play-notifications';
         self::$gcs_bucket   = 'gs://php-cloudfunctions';
     }
-    
+
     /** It depends on the <code>gcloud</code> command to obtain the project ID. */
     private static function get_project_id(): string {
         $stdout = shell_exec('gcloud config get-value project');
@@ -36,7 +36,7 @@ class SimpleTestCase extends TestCase {
 
     /** Test: On HTTPS */
     public function test_on_https(): void {
-        $payload = json_encode(self::$json_data);
+        $payload = json_encode( self::$json_data );
         $request = new ServerRequest('POST', '/', [], $payload);
         $response = CloudFunctions::on_https( $request );
         // $this->assertTrue($response->getReasonPhrase().equals("OK"));
