@@ -34,9 +34,9 @@
     "php": ">= 7.4",
     "ext-json": "*",
     "ext-curl": "*",
-    "google/cloud-logging": "^1.24.4",
+    "google/cloud-logging": "^1.24.5",
     "google/cloud-functions-framework": "^v1.1.0",
-    "google/cloud-storage": "^v1.27.1",
+    "google/cloud-storage": "^v1.28.0",
     "guzzlehttp/psr7": "^2.4.0"
   },
   "require-dev": {
