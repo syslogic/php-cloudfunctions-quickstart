@@ -34,13 +34,13 @@
     "php": ">= 7.4",
     "ext-json": "*",
     "ext-curl": "*",
-    "google/cloud-logging": "^1.24.5",
+    "google/cloud-logging": "^1.24.8",
     "google/cloud-functions-framework": "^v1.1.0",
-    "google/cloud-storage": "^v1.28.0",
-    "guzzlehttp/psr7": "^2.4.0"
+    "google/cloud-storage": "^v1.28.1",
+    "guzzlehttp/psr7": "^2.4.1"
   },
   "require-dev": {
-    "phpunit/phpunit": "^9.5.21",
+    "phpunit/phpunit": "^9.5.25",
     "google/cloud-tools": "^0.12.0"
   },
   "autoload": {
