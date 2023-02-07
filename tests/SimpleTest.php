@@ -7,12 +7,11 @@ use CloudFunctions\CloudFunctions;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Class Simple TestCase.
- *
+ * Simple {@link TestCase}
  * @author Martin Zeitler
  * @version 1.0.0
  */
-class SimpleTestCase extends TestCase {
+class SimpleTest extends TestCase {
 
     private static string $project_id;
     private static array $json_data;

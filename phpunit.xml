@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit colors="true">
-  <php>
+<!-- https://phpunit.readthedocs.io/en/10.0/configuration.html -->
+<phpunit
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd"
+        colors="true">
 
-  </php>
+  <php/>
 
   <coverage>
     <include>
@@ -16,7 +19,7 @@
 
   <testsuites>
     <testsuite name="main">
-      <directory suffix="TestCase.php">./tests</directory>
+      <directory>tests</directory>
     </testsuite>
   </testsuites>
 
