@@ -21,12 +21,14 @@
     "url": "https://www.paypal.me/syslogic"
   }],
   "scripts": {
+    "docs": "phpDocumentor.phar",
     "test": "vendor/bin/phpunit --bootstrap vendor/autoload.php --configuration phpunit.xml --testsuite main",
     "start": [ "Composer\\Config::disableProcessTimeout", "FUNCTION_TARGET=on_https php -S localhost:${PORT:-8081} vendor/bin/router.php" ],
     "coverage_linux": "export XDEBUG_MODE=coverage && vendor/bin/phpunit --bootstrap vendor/autoload.php --configuration coverage.xml --testsuite main",
     "coverage_windows": "setlocal xdebug.mode=coverage && %cd%/vendor/bin/phpunit --bootstrap vendor/autoload.php --configuration coverage.xml --testsuite main"
   },
   "scripts-descriptions": {
+    "docs": "Generate docs",
     "test": "Run PHPunit tests",
     "start": "Call function on_https",
     "coverage_linux": "Run PHPUnit tests with code coverage on Linux",
