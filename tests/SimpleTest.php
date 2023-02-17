@@ -2,8 +2,8 @@
 namespace CloudFunctions\Test;
 
 use CloudEvents\V1\CloudEventImmutable;
-use GuzzleHttp\Psr7\ServerRequest;
 use CloudFunctions\CloudFunctions;
+use GuzzleHttp\Psr7\ServerRequest;
 use PHPUnit\Framework\TestCase;
 
 /**
