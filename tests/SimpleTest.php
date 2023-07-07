@@ -33,8 +33,8 @@ class SimpleTest extends TestCase {
         else {return $stdout;}
     }
 
-    /** Test: On HTTPS */
-    public function test_on_https(): void {
+    /** Test: HTTP Request */
+    public function test_on_http(): void {
         $payload = json_encode( self::$json_data );
         $request = new ServerRequest('POST', '/', [], $payload);
         $response = CloudFunctions::on_https( $request );
@@ -42,7 +42,7 @@ class SimpleTest extends TestCase {
         $this->assertTrue($response->getStatusCode() == 200);
     }
 
-    /** Test: On Pub/Sub Event */
+    /** Test: Pub/Sub Event */
     public function test_on_pubsub(): void {
         CloudFunctions::on_pubsub(new CloudEventImmutable(
             uniqId(), // id
@@ -54,7 +54,7 @@ class SimpleTest extends TestCase {
         self::assertTrue( true );
     }
 
-    /** Test: On GCS Event */
+    /** Test: Cloud Storage Event */
     public function test_on_gcs(): void {
         CloudFunctions::on_gcs(new CloudEventImmutable(
             uniqId(), // id
