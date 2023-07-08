@@ -2,3 +2,4 @@
 /.phpunit.result.cache
 /build/
 /composer.lock
+/nbproject/private/

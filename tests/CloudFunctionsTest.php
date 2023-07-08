@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
  * @author Martin Zeitler
  * @version 1.0.0
  */
-class SimpleTest extends TestCase {
+class CloudFunctionsTest extends TestCase {
 
     private static string $project_id;
     private static array $json_data;

@@ -15,13 +15,13 @@ use Psr\Http\Message\ServerRequestInterface;
  */
 class CloudFunctions {
 
-    /** On HTTPS */
+    /** On HTTP Request */
     public static function on_https( ServerRequestInterface $request ): ResponseInterface {
         $params = $request->getQueryParams();
         $body = sprintf('Hello, %s!', $params['name'] ?? 'World');
         return (new Response())
             ->withBody(Utils::streamFor($body))
-            ->withStatus(200);
+            ->withStatus(200, 'OK');
     }
 
     /** On Pub/Sub Event */
@@ -33,7 +33,7 @@ class CloudFunctions {
         fwrite($log, "Hello, $name!" . PHP_EOL);
     }
 
-    /** On GCS Event */
+    /** On Cloud Storage Event */
     public static function on_gcs( CloudEventInterface $event ): void {
         $log = fopen(getenv('LOGGER_OUTPUT') ?: 'php://stdout', 'wb');
         $data = $event->getData();
