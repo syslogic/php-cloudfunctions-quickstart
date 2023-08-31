@@ -23,12 +23,11 @@ jobs:
       uses: actions/cache@v3
       with:
         path: vendor
-        key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-php-
+        key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.json') }}
 
     - name: 🔢 Install dependencies
       id: composer-dependencies
+      if: steps.composer-cache.outputs.cache-hit != 'true'
       run: composer install --prefer-dist --no-progress
 
     - name: 🗄️ Run test suite
