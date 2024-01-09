@@ -41,8 +41,8 @@
     "ext-curl": "*",
     "guzzlehttp/psr7": "^2.6.2",
     "google/cloud-functions-framework": "^v1.3.0",
-    "google/cloud-storage": "^v1.36.0",
-    "google/cloud-logging": "^1.28.5"
+    "google/cloud-storage": "^v1.36.1",
+    "google/cloud-logging": "^1.29.0"
   },
   "require-dev": {
     "google/cloud-tools": "^0.13.0",
