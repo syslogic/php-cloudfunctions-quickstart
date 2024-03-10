@@ -39,16 +39,16 @@
     "php": ">= 7.4",
     "ext-json": "*",
     "ext-curl": "*",
-    "guzzlehttp/psr7": "^2.6.2",
     "google/cloud-functions-framework": "^v1.3.0",
-    "google/cloud-storage": "^v1.36.1",
-    "google/cloud-logging": "^1.29.0"
+    "google/cloud-storage": "^v1.39.1",
+    "google/cloud-logging": "^1.29.3",
+    "guzzlehttp/psr7": "^2.6.2"
   },
   "require-dev": {
     "google/cloud-tools": "^0.13.0",
     "jetbrains/phpstorm-attributes": "^1.0",
-    "phpunit/php-code-coverage": "^9.2.30",
-    "phpunit/phpunit": "^9.6.15"
+    "phpunit/php-code-coverage": "^9.2.31",
+    "phpunit/phpunit": "^9.6.17"
   },
   "autoload": {
     "psr-4": {
