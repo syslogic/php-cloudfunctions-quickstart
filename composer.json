@@ -40,13 +40,13 @@
     "ext-json": "*",
     "ext-curl": "*",
     "google/cloud-functions-framework": "^v1.3.0",
-    "google/cloud-storage": "^v1.41.2",
-    "google/cloud-logging": "^1.29.4",
+    "google/cloud-storage": "^v1.42.0",
+    "google/cloud-logging": "^1.30.2",
     "guzzlehttp/psr7": "^2.6.2"
   },
   "require-dev": {
     "google/cloud-tools": "^0.13.0",
-    "jetbrains/phpstorm-attributes": "^1.0",
+    "jetbrains/phpstorm-attributes": "^1.1",
     "phpunit/php-code-coverage": "^9.2.31",
     "phpunit/phpunit": "^9.6.19"
   },
