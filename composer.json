@@ -36,11 +36,12 @@
   },
   "repositories": [],
   "require": {
-    "php": ">= 7.4",
+    "php": ">= 8.0",
     "ext-json": "*",
     "ext-curl": "*",
+    "phpseclib/phpseclib": "^3.0.39",
     "google/cloud-functions-framework": "^v1.3.0",
-    "google/cloud-storage": "^v1.42.0",
+    "google/cloud-storage": "^v1.42.1",
     "google/cloud-logging": "^1.30.3",
     "guzzlehttp/psr7": "^2.6.2"
   },
