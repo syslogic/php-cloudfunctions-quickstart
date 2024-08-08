@@ -43,13 +43,13 @@
     "google/cloud-functions-framework": "^v1.3.0",
     "google/cloud-storage": "^v1.42.1",
     "google/cloud-logging": "^1.30.3",
-    "guzzlehttp/psr7": "^2.6.2"
+    "guzzlehttp/psr7": "^2.7.0"
   },
   "require-dev": {
     "google/cloud-tools": "^0.14.0",
     "jetbrains/phpstorm-attributes": "^1.1",
     "phpunit/php-code-coverage": "^9.2.31",
-    "phpunit/phpunit": "^9.6.19"
+    "phpunit/phpunit": "^9.6.20"
   },
   "autoload": {
     "psr-4": {
